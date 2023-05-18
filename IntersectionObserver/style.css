@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kameron", serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url("3648170_l.jpg");
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-attachment: fixed;
+}
+body::after {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 500vh;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+}
+
+.title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+.title.active {
+  opacity: 1;
+  transition: all 3s;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+section h2 {
+  position: absolute;
+  font-size: 2.3rem;
+  top: 70%;
+  z-index: 2;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+section h2.active {
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+.img-wrap {
+  position: relative;
+  top: 40%;
+  height: 40%;
+  width: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+.img-wrap.active {
+  width: 40vw;
+  opacity: 1;
+  transition: opacity 1s, width 2s;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.6);
+}
+.img.active {
+  transform: scale(1);
+  transition: 1s ease-out;
+}/*# sourceMappingURL=style.css.map */
